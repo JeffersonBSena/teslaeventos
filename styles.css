@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.logo-tesla {
+    height: 180px;
+}
+
+
+button {
+    background-color: #E1049B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px 120px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #b8047f;
+    transition: 0.8s ease-in-out;
+}
+
+.fotos-evento{
+    width: 600px;
+}
+
+/* Alplicar o flex no body*/
+
+body {
+    
+    height: 100vh;
+    background-image: url('./assets/concert\ goers.jpg'); /* Caminho da imagem */
+  background-size: cover; /* Faz a imagem preencher toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  position: relative; /* Necessário para o overlay */
+    
+    
+}
+
+.content {
+    width: 40%;
+}
+
+.video {
+    position: fixed;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+}
+
+video {
+    width: 100vw;
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    height: 100vh;
+    margin-left: 50px;
+    gap: 15px;
+}
+
+.titulo-principal {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.1;
+    padding-bottom: 10px;
+    color: rgb(30, 29, 29);
+}
+
+.texto-complementar {
+    font-size: 32px;
+    font-weight: 500;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: rgb(18, 18, 18);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.859); /* Cor preta com opacidade de 50% */
+    z-index: -99; /* Garante que o overlay fique acima do background */
+}
+
+.destaque img {
+  width: 90%;
+}
+
+ul li {
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+
+  /* Média query para telas com largura máxima de 768px (tablets e celulares) */
+@media only screen and (max-width: 1024px) {
+    .caixa-mae {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+      margin-left: 0;
+    }
+  
+    .content {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .titulo-principal {
+      font-size: 36px;
+      padding-bottom: 10px;
+    }
+  
+    .texto-complementar {
+      font-size: 24px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    button {
+      padding: 15px 80px;
+      font-size: 16px;
+    }
+  
+    .logo-tesla {
+      height: 100px;
+      margin-bottom: 20px;
+      
+    }
+  
+    .fotos-evento {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    ul li {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  }
+  
+  /* Média query para telas com largura máxima de 768px (tablets e celulares) */
+@media only screen and (max-width: 800px) {
+    .caixa-mae {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+      margin-left: 0;
+    }
+  
+    .content {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Imagem logo após o título principal */
+    .titulo-principal + .fotos-evento {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .titulo-principal {
+      font-size: 36px;
+      padding-bottom: 10px;
+    }
+  
+    .texto-complementar {
+      font-size: 24px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    button {
+      padding: 15px 80px;
+      font-size: 16px;
+    }
+  
+    .logo-tesla {
+      height: 100px;
+      margin-bottom: 20px;
+    }
+  
+    .fotos-evento {
+      width: 100%;
+    }
+  
+    /* Remove os pontinhos das listas */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  
+    ul li {
+      font-size: 14px;
+      margin-left: 0;
+    }
+  }
+  
+  /* Média query para telas com largura máxima de 480px (celulares pequenos) */
+  @media only screen and (max-width: 480px) {
+    .caixa-mae {
+      padding: 10px;
+    }
+  
+    .titulo-principal {
+      font-size: 32px;
+    }
+  
+    .texto-complementar {
+      font-size: 22px;
+    }
+  
+    button {
+      padding: 10px 50px;
+      font-size: 14px;
+    }
+  
+    .logo-tesla {
+      height: 80px;
+    }
+  
+    /* Remove os pontinhos das listas */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  
+    ul li {
+      font-size: 14px;
+      margin-left: 0;
+    }
+  
+    /* Imagem logo após o título principal */
+    .titulo-principal + .fotos-evento {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .destaque img {
+      width: 100%;
+    }
+  }
+  
+
+
+/* Modo paisagem para telas menores que 768px */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .caixa-mae {
+      flex-direction: row; /* Alinha os elementos horizontalmente */
+      padding: 10px;
+      gap: 10px;
+      justify-content: space-around; /* Ajusta espaçamento */
+  }
+
+  .content {
+      width: 45%; /* Reduz a largura dos conteúdos para caber na tela */
+      text-align: left; /* Ou center, dependendo do design */
+  }
+
+  .titulo-principal {
+      font-size: 28px; /* Reduz tamanho do título */
+      padding-bottom: 5px;
+  }
+
+  .texto-complementar {
+      font-size: 18px; /* Reduz tamanho do texto */
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  button {
+      padding: 10px 40px; /* Reduz o botão para caber na tela */
+      font-size: 14px;
+  }
+
+  .logo-tesla {
+      height: 80px; /* Ajusta altura do logo */
+      margin-bottom: 10px;
+  }
+
+  .fotos-evento {
+      width: 100%;
+      max-width: 350px; /* Limita a largura da imagem */
+  }
+
+  ul {
+      list-style: none;
+      padding-left: 0;
+  }
+
+  ul li {
+      font-size: 14px;
+      margin-left: 10px;
+  }
+}
